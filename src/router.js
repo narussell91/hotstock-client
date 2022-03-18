@@ -11,7 +11,7 @@ const router = new Router({
   mode: "history",
   routes: [
     { path: "/", name: "signin", component: SignIn },
-    { path: "/dasboard", name: "dashboard", component: AnalyticsDashboard },
+    { path: "/dashboard", name: "dashboard", component: AnalyticsDashboard },
     { path: "/contactus", name: "contactUs", component: ContactUs },
   ],
 });
