@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run lint -- --fix && vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "aws --profile vue-deployer --region us-east-2 s3 sync ./dist s3://naterusselldev.com --delete"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
