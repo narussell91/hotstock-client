@@ -73,7 +73,7 @@ export default {
       alert(
         "Stock recommendations and comments presented on hotstock.com are solely those of the analysts and experts quoted. They do not represent the opinions of hotstock.com on whether to buy, sell or hold shares of a particular stock. Investors should be cautious about any and all stock recommendations and should consider the source of any advice on stock selection. Various factors, including personal or corporate ownership, may influence or factor into an expert's stock analysis or opinion. All investors are advised to conduct their own independent research into individual stocks before making a purchase decision. In addition, investors are advised that past stock performance is no guarantee of future price appreciation. By clicking OK you are  verifiying that you are over the age of 18"
       );
-      router.push("/dashboard");
+      router.push("/home");
     },
   },
 };
