@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <b-navbar-brand to="/home">
-        <i>HotStock</i>
+        <em>HotStock</em>
       </b-navbar-brand>
       <button
         class="navbar-toggler"
