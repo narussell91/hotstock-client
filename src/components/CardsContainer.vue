@@ -1,36 +1,56 @@
 <template>
-  <v-container class="cards-container">
-    <v-card class="card">
-      <p class="card-heading">OPEN ($)</p>
-      <p class="card-body">
-        {{ Number(stockDataLastDayInfo["1. open"]).toLocaleString("en-US") }}
-      </p>
-    </v-card>
-    <v-card class="card">
-      <p class="card-heading">HIGH ($)</p>
-      <p class="card-body">
-        {{ Number(stockDataLastDayInfo["2. high"]).toLocaleString("en-US") }}
-      </p>
-    </v-card>
-    <v-card class="card">
-      <p class="card-heading">LOW ($)</p>
-      <p class="card-body">
-        {{ Number(stockDataLastDayInfo["3. low"]).toLocaleString("en-US") }}
-      </p>
-    </v-card>
-    <v-card class="card">
-      <p class="card-heading">CLOSE ($)</p>
-      <p class="card-body">
-        {{ Number(stockDataLastDayInfo["4. close"]).toLocaleString("en-US") }}
-      </p>
-    </v-card>
-    <v-card class="card">
-      <p class="card-heading">VOLUME ($)</p>
-      <p class="card-body">
-        {{ Number(stockDataLastDayInfo["5. volume"]).toLocaleString("en-US") }}
-      </p>
-    </v-card>
-  </v-container>
+  <b-container>
+    <b-row>
+      <b-col>
+        <b-card class="card">
+          <p class="card-heading">OPEN ($)</p>
+          <p class="card-body">
+            {{
+              Number(stockDataLastDayInfo["1. open"]).toLocaleString("en-US")
+            }}
+          </p>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card class="card">
+          <p class="card-heading">HIGH ($)</p>
+          <p class="card-body">
+            {{
+              Number(stockDataLastDayInfo["2. high"]).toLocaleString("en-US")
+            }}
+          </p>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card class="card">
+          <p class="card-heading">LOW ($)</p>
+          <p class="card-body">
+            {{ Number(stockDataLastDayInfo["3. low"]).toLocaleString("en-US") }}
+          </p>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card class="card">
+          <p class="card-heading">CLOSE ($)</p>
+          <p class="card-body">
+            {{
+              Number(stockDataLastDayInfo["4. close"]).toLocaleString("en-US")
+            }}
+          </p>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card class="card">
+          <p class="card-heading">VOLUME ($)</p>
+          <p class="card-body">
+            {{
+              Number(stockDataLastDayInfo["5. volume"]).toLocaleString("en-US")
+            }}
+          </p>
+        </b-card>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -50,25 +70,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 30px;
+  display: flex;
+  column-gap: 5%;
 }
 .card {
   background-color: #000000;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 5%;
   color: #fff;
-  box-shadow: 0px 20px 15px -17px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0px 20px 15px -17px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 20px 15px -17px rgba(0, 0, 0, 0.4);
+  margin: 2%;
+  box-shadow: 0px 0px 5px 1px rgb(128, 128, 128);
 }
 .card-heading {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   margin: 0;
 }
 .card-body {
-  font-size: 16px;
+  font-size: 100%;
   font-weight: 800;
   margin: 0;
 }

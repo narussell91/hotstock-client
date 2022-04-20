@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <HeaderComponent class="header-component" />
+    <HeaderIndex></HeaderIndex>
     <AlertComponent v-if="alertStatus" />
     <router-view />
-    <Footer></Footer>
+    <FooterIndex></FooterIndex>
   </div>
 </template>
 
 <script>
-import HeaderComponent from "./components/HeaderComponent.vue";
 import AlertComponent from "./components/AlertComponent.vue";
-import Footer from "./components/FooterComponent.vue";
+import HeaderIndex from "./components/Header/header-index";
+import FooterIndex from "./components/Header/footer-index";
 
 export default {
   name: "App",
   components: {
-    HeaderComponent,
     AlertComponent,
-    Footer,
+    HeaderIndex,
+    FooterIndex,
   },
   computed: {
     alertStatus() {
@@ -42,10 +42,11 @@ export default {
 
 <style>
 #app {
+  width: 100%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #000000;
 }
 </style>

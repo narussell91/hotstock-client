@@ -1,6 +1,6 @@
 <template>
   <!-- Candlestick Chart container starts here-->
-  <div class="chart-container">
+  <b-container class="chart-container">
     <div ref="chart"></div>
     <!-- Daily-Weekly-Monthly Options radio buttons cntainer starts here -->
     <div class="options">
@@ -33,7 +33,7 @@
       <label class="option-label" for="monthly">Monthly</label>
     </div>
     <!-- Daily-Weekly-Monthly Options radio buttons cntainer ends here -->
-  </div>
+  </b-container>
   <!-- Candlestick Chart container ends here-->
 </template>
 

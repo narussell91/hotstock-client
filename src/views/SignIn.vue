@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <b-container fluid class="box">
       <div class="text">
         <h1>Sign In</h1>
       </div>
@@ -40,10 +40,11 @@
           <b-row>
             <b-col>
               <b-button
-                v-on:click="greeting"
+                v-on:click="greeting()"
                 class="btn float-right"
                 type="submit"
                 variant="dark"
+                v-model="isValid"
                 >Submit</b-button
               >
             </b-col>
@@ -61,6 +62,7 @@ export default {
       //  make contactparams into objects, makenew data strings with said values then change binder on component
       contactParams: ["Email:", "Subject:"],
       userId: "",
+      isValid: false,
     };
   },
   computed: {
@@ -75,10 +77,16 @@ export default {
       );
       router.push("/home");
     },
+    showComponents: function () {
+      this.isValid = true;
+    },
   },
 };
 </script>
 <style scoped>
+.box {
+  margin-bottom: 10%;
+}
 .text {
   margin: 5%;
 }
