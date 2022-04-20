@@ -17,5 +17,6 @@
 .dummy-box {
   margin: 30%;
   width: 100%;
+  text-align: center;
 }
 </style>
