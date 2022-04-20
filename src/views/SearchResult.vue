@@ -1,9 +1,7 @@
 <template>
   <!-- Showing this component if we got the stockData from API in Vuex -->
   <main class="main" v-if="stockData">
-    <h1 class="title">
-      {{ searchInput }} Last Market Session {{ timeSeriesName }} Information
-    </h1>
+    <h1 class="title">{{ searchInput }} Market Session {{ timeSeriesName }}</h1>
     <CandlestickChart class="chart" />
     <CardsContainer />
   </main>
@@ -58,7 +56,7 @@ export default {
   margin-bottom: 10px;
 }
 .cards-container {
-  margin-bottom: 30px;
+  margin: 2%;
 }
 .chart {
   box-shadow: 0px 0px 5px 1px rgb(128, 128, 128);

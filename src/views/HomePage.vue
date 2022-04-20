@@ -17,6 +17,7 @@
 <style>
 .welcome-box {
   margin: 20%;
+  text-align: center;
 }
 .home-component {
   width: 100%;
