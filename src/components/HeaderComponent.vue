@@ -3,7 +3,7 @@
     <router-link class="logo" :to="{ name: 'home' }" style="color: white"
       ><em>HOTSTOCK</em></router-link
     >
-    <input
+    <b-input
       @change="mutateSearchInputInVuex"
       v-model="searchInput"
       type="text"

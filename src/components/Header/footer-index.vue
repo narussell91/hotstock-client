@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed-bottom">
+  <div class="fixed-bottom footer">
     <b-col>
       <b-navbar class="navbar navbar-dark bg-primary">
         <ul class="navbar-nav mx-auto">
@@ -18,3 +18,9 @@
     </b-col>
   </div>
 </template>
+
+<style scoped>
+.footter {
+  padding: 10%;
+}
+</style>

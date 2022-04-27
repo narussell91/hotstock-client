@@ -1,27 +1,24 @@
 <template>
   <div id="app">
-    <HeaderIndex></HeaderIndex>
     <AlertComponent v-if="alertStatus" />
     <router-view />
-    <FooterIndex></FooterIndex>
   </div>
 </template>
 
 <script>
 import AlertComponent from "./components/AlertComponent.vue";
-import HeaderIndex from "./components/Header/header-index";
-import FooterIndex from "./components/Header/footer-index";
 
 export default {
   name: "App",
   components: {
     AlertComponent,
-    HeaderIndex,
-    FooterIndex,
   },
   computed: {
     alertStatus() {
       return this.$store.state.alertStatus.status;
+    },
+    signInStatus() {
+      return this.$store.state.isSignedIn;
     },
   },
   watch: {

@@ -81,8 +81,8 @@ header {
 input {
   background-color: rgb(255, 255, 255);
   font-size: 18px;
-  width: 300px;
-  height: 40px;
+  width: 100%;
+  height: 75%;
   padding-left: 50px;
   border: 1px solid rgb(190, 190, 190);
   border-radius: 5px;

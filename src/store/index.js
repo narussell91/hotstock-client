@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    isSignedIn: false,
     isAdmin: false,
     searchInput: "",
     stockData: "",
@@ -18,6 +19,9 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    SIGN_IN(state, payload) {
+      state.isSignedIn = payload;
+    },
     SET_ADMIN(state, payload) {
       state.isAdmin = payload;
     },
