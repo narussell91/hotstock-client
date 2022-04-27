@@ -273,18 +273,17 @@ High: ${formatValue(Yh[i])}`;
 }
 .options {
   position: absolute;
-  top: 20px;
+  top: 5%;
   left: 35%;
-  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid grey;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 .option-label {
-  width: 60px;
+  width: 50%;
   text-align: center;
 }
 input {

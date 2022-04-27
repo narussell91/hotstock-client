@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderIndex></HeaderIndex>
     <b-container>
       <div class="text">
         <h1>Get in Touch</h1>
@@ -10,7 +11,7 @@
         </h5>
         <h5>We will do our best to answer as soon as possible!</h5>
       </div>
-      <b-card class="text-center" bg-variant="secondary">
+      <b-card class="contact-body" bg-variant="secondary">
         <b-col sm="10">
           <b-row class="my-4" v-for="params in contactParams" :key="params">
             <b-col sm="2">
@@ -35,7 +36,11 @@
           </b-row>
           <b-row>
             <b-col sm="10">
-              <b-button class="btn float-right" type="submit" variant="dark"
+              <b-button
+                v-on:click="messageSent()"
+                class="btn float-right"
+                type="submit"
+                variant="dark"
                 >Submit</b-button
               >
             </b-col>
@@ -43,15 +48,32 @@
         </b-col>
       </b-card>
     </b-container>
+    <FooterIndex></FooterIndex>
   </div>
 </template>
 <script>
+import router from "@/router";
+import HeaderIndex from "../components/Header/header-index";
+import FooterIndex from "../components/Header/footer-index";
+
 export default {
+  components: {
+    HeaderIndex,
+    FooterIndex,
+  },
   data() {
     return {
       //  make contactparams into objects, makenew data strings with said values then change binder on component
       contactParams: ["Email:", "Subject:"],
     };
+  },
+  methods: {
+    messageSent: function () {
+      alert(
+        "Your message has been sent. Our team will take a look and follow up with you as soon as possible. Thank you for your time!"
+      );
+      router.push("/home");
+    },
   },
 };
 </script>
@@ -61,5 +83,7 @@ export default {
 }
 .contact-body {
   text-align: center;
+  margin: 10%;
+  margin-top: 5%;
 }
 </style>

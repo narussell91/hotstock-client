@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HeaderIndex></HeaderIndex>
     <div class="welcome-box home">
       <h1>Welcome to HOTSTOCK</h1>
       <br />
@@ -12,8 +13,22 @@
         Take your financial future into your own hands with HOTSTOCK!
       </p>
     </div>
+    <FooterIndex></FooterIndex>
   </div>
 </template>
+
+<script>
+import HeaderIndex from "../components/Header/header-index";
+import FooterIndex from "../components/Header/footer-index";
+
+export default {
+  components: {
+    HeaderIndex,
+    FooterIndex,
+  },
+};
+</script>
+
 <style>
 .welcome-box {
   margin: 20%;

@@ -57,7 +57,6 @@
 export default {
   name: "CarsContainer",
   computed: {
-    //Getting the last item of stockData array from Vuex to display it in our cards in this component
     stockDataLastDayInfo() {
       return this.$store.state.stockData[0][
         Object.keys(this.$store.state.stockData[0])
@@ -66,12 +65,11 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .cards-container {
   display: flex;
   column-gap: 5%;
+  margin-bottom: 20px;
 }
 .card {
   background-color: #000000;
@@ -88,5 +86,6 @@ export default {
   font-size: 100%;
   font-weight: 800;
   margin: 0;
+  text-align: center;
 }
 </style>
